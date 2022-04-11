@@ -1,0 +1,41 @@
+.site__header {
+	position: fixed;
+	//z-index: 10;
+	left: calc($frame-padding * 2);
+	top: calc($frame-padding * 2);
+	//mix-blend-mode:difference;
+}
+
+.site__header__title {
+	@extend %title-120;
+	margin: -0.1em 0 0 -0.04em;
+	color: black;
+}
+
+.site__header__label {
+	@extend %title-60;
+
+	margin-top: 5px;
+}
+
+.site__header__nav {
+	@extend %title-30;
+
+	margin-top: 50px;
+}
+
+.site__header__nav ol {
+	display: flex;
+	flex-direction: row;
+	column-gap: 15px;
+}
+
+.site__header__nav ol li {
+	position:relative
+}
+
+@media (hover: hover) {
+	.site__header__nav ol li :hover {
+			opacity:.25
+	}
+}

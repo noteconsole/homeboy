@@ -1,0 +1,39 @@
+.home__scroll {
+	position: relative;
+	//top: 3rem;
+	height: 6rem;
+	width: 100vw;
+	top: 50vw;
+	border-top: solid 1px #fafafa;
+	border-bottom: solid 1px #fafafa;
+	display: flex;
+}
+
+.home__scroll__container:nth-child(1) {
+	-webkit-animation: marquee-mobile 15s linear infinite;
+	animation: marquee-mobile 15s linear infinite;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	will-change: transform;
+
+	text-align: right;
+
+  /* animation properties */
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+
+  -moz-animation: my-animation 12s linear infinite;
+  -webkit-animation: my-animation 12s linear infinite;
+  animation: my-animation 12s linear infinite;
+}
+
+.home__scroll p {
+	color: #fafafa;
+	padding-right: 5rem;
+	font-family: Montreal-book,sans-serif;
+	font-size: 6.0rem;
+	white-space: nowrap;
+}

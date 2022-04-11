@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+.notes__container {
+	position: fixed;
+	z-index: 10;
+	left: max(60px, 12vmin);
+	right: max(60px, 12vmin);
+	top: 30%;
+	bottom: max(60px, 12vmin);
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-template-rows: repeat(2, 50%);
+	margin-left: 4rem;
+	margin-right: 4rem;
+	overflow: scroll;
+	border: 1px solid black;
+}
+
+/* Float four columns side by side */
+.notes__cell__top {
+  float: left;
+	border-right: 1px solid #0b0b00;
+	border-bottom: 1px solid #0b0b00;
+}
+
+.notes__cell__top__right {
+  float: left;
+	border-bottom: 1px solid #0b0b00;
+}
+
+.notes__cell__bottom {
+  float: left;
+	border-right: 1px solid #0b0b00;
+}
+
+.notes__cell__bottom__right {
+  float: left;
+}
+
+
+/* Remove extra left and right margins, due to padding in columns */
+.notes__row {
+	display: flex;
+	margin: 1rem;
+	justify-content: center;
+}
+
+/* Clear floats after the columns */
+.notes__row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.notes__card {
+	overflow: hidden;
+	text-align: center;
+	justify-content: center;
+	border: 1px solid;
+	display: flex;
+}
+
+.notes__card__title {
+	font-size: 6rem;
+	font-family: $vg5000;
+	z-index: 1;
+	position: relative;
+	margin: auto;
+}
+
+.notes__card:hover {
+	background-color: var(--backgroundColor);
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .notes__column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+		padding-left: max(40px, 8vmin);
+		padding-right: max(40px, 8vmin);
+  }
+}

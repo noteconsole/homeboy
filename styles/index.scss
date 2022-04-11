@@ -1,0 +1,24 @@
+@import './base/reset';
+
+@import './utils/variables';
+//@import './utils/functions';
+@import './utils/mixins';
+//@import './utils/vendors';
+@import './utils/responsive';
+
+@import './shared/titles';
+@import './shared/descriptions';
+@import './shared/scroll';
+@import './shared/header';
+
+@import './base/fonts';
+@import './base/base';
+
+@import './layout/frame';
+//@import './layout/header';
+//@import './layout/navbar';
+
+@import './pages/home';
+@import './pages/about';
+@import './pages/contact';
+@import './pages/notes';

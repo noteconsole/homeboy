@@ -1,0 +1,154 @@
+.home__container__1 {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 25%;
+	margin-top: 0%;
+	border-bottom: solid 1px #0b0b0b;
+  align-items: center;
+}
+.home__container__2 {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 25%;
+	margin-top: 0%;
+	border-bottom: solid 1px #0b0b0b;
+	align-items: center;
+}
+.home__container__3 {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 25%;
+	margin-top: 0%;
+	border-bottom: solid 1px #0b0b0b;
+	align-items: center;
+}
+.home__container__4 {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 25%;
+	margin-top: 0%;
+	align-items: center;
+}
+/*
+$raw-sienna: #b85e00;
+$apricot-yellow: #ffe600;
+$benzol-green: #00d973;
+$deep-lyons-blue: #0024cc;
+*/
+
+.home__container__1:hover {
+	background-color: $apricot-yellow;
+}
+
+.home__container__2:hover {
+	background-color: $deep-lyons-blue;
+}
+
+.home__container__3:hover {
+	background-color: $benzol-green;
+}
+
+.home__container__4:hover {
+	background-color: $raw-sienna;
+}
+
+.home__title {
+	@extend %title-200;
+	color: black;
+	position: absolute;
+	padding-left: $frame-padding;
+	overflow: hidden;
+	text-transform: uppercase;
+	align-items: center;
+}
+
+.home__title a {
+	text-decoration: none;
+}
+
+.home__title h1 {
+	color: #0b0b0b;
+}
+
+
+.l__content {
+	display: flex;
+	flex-direction: row;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	background-color: #0b0b0b;
+	overflow-x: hidden!important;
+	will-change: transform;
+}
+
+.page {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	//background-color: $apricot-yellow;
+	white-space: nowrap;
+}
+
+.background {
+	position: fixed;
+	display: flex;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	//background-color: $apricot-yellow;
+	/*
+	left: $frame-padding;
+	right: $frame-padding;
+	top: $frame-padding;
+	bottom: $frame-padding;
+	*/
+	pointer-events: none;
+	overflow:hidden;
+}
+
+.home {
+	@extend %cover;
+
+  background-size: cover;
+  //background-color: $color-lime;
+
+	overflow: hidden;
+  text-align: center;
+}
+
+.home__wrapper {
+}
+
+
+
+.home__titles__label {
+
+}
+
+.home__titles__title {
+
+}
+
+.home__gallery {
+
+}
+
+.home__gallery__media {
+
+}
+
+.home__gallery__media__image {
+
+}
+
+.home__link {
+
+}

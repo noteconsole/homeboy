@@ -1,0 +1,17 @@
+.highlight {
+    left: 0;
+    line-height: 70px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+		height: 150px;
+		overflow: scroll;
+}
+
+.highlight p {
+	font-family: $vg5000;
+	font-size: 2rem;
+	font-weight: 300;
+}
