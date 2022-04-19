@@ -28,8 +28,47 @@ const initApi = req => {
   })
 }
 
+const noteTopics = ["Debt", "Film", "Mets", "Music", "Other", "Projects", "Reading", "SCF"]
+
+function noteMatch(value) {
+
+	if (value == 'Debt') {
+		return '/notes/debt'
+	}
+
+	if (value == 'Film') {
+		return '/notes/film'
+	}
+
+	if (value == 'Mets') {
+		return '/notes/mets'
+	}
+
+	if (value == 'Music') {
+		return '/notes/music'
+	}
+
+	if (value == 'Other') {
+		return '/notes/other'
+	}
+
+	if (value == 'Projects') {
+		return '/notes/projects'
+	}
+
+	if (value == 'Reading') {
+		return '/notes/reading'
+	}
+
+	if (value == 'SCF') {
+		return '/notes/scf'
+	}
+
+}
+
 // Link Resolver
-const handleLinkResolver = doc => {
+function handleLinkResolver(note, noteTopics) {
+	noteTopics.forEach(noteMatch)
 	if (doc.type === 'product') {
 		return `/detail/${doc.slug}`
 	}
@@ -61,6 +100,7 @@ app.use((req, res, next) => {
     linkResolver: handleLinkResolver
 	}
 
+	//res.locals.Notes = notes = ["Debt", "Film", "Mets", "Music", "Other", "Projects", "Reading", "SCF"];
 	//res.locals.Link = handleLinkResolver
 
 	res.locals.Numbers = index => {
@@ -74,7 +114,7 @@ app.use((req, res, next) => {
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
-
+/*
 const handleRequest = async api => {
 	const meta = await api.getSingle('metadata')
 
@@ -82,6 +122,7 @@ const handleRequest = async api => {
 		meta
 	}
 }
+*/
 
 app.get('/', (req, res) => {
 	//const api = await initApi(req)
@@ -100,20 +141,30 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/notes', async (req, res) => {
-	const api = await initApi(req)
+	//const api = await initApi(req)
 	//const defaults = await handleRequest(api)
-	const note = await api.getSingle('note')
+	//const note = await api.getSingle('note')
 
-	let notes = [];
-	console.log("before push"+notes)
-	notes.push(note)
-	console.log("after push"+notes)
-
-  res.render('pages/notes', {
-		title: "Notes",
-		note
-
+  res.render('pages/blog', {
+		title: "Notes"
 	})
+})
+
+app.get('/notes/:id', async (req, res) => {
+
+	res.render('pages/notes/' + req.params.id, {
+		title: req.params.id,
+	})
+
+	/*
+	const notes = handleLinkResolver(noteTopics)
+
+  res.render('pages/notes_breakout/:note', {
+		title: "Notes",
+		vals: vals,
+		notes: notes,
+	})
+	*/
 })
 
 app.get('/contact', (req, res) => {

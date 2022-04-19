@@ -14,7 +14,7 @@
 	grid-template-rows: repeat(2, 50%);
 	margin-left: 4rem;
 	margin-right: 4rem;
-	overflow: scroll;
+	overflow: hidden;
 	border: 1px solid black;
 }
 
@@ -73,6 +73,11 @@
 
 .notes__card:hover {
 	background-color: var(--backgroundColor);
+}
+
+.notes__container a {
+	text-decoration: none;
+	color: #0b0b0b;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
